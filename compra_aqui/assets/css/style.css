@@ -1,0 +1,254 @@
+ 
+/* CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f5f9;
+    color: #172b4d;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+/* FORMULÁRIO DE PUBLICAÇÃO */
+body:has(form) {
+    padding: 35px 20px;
+}
+
+body:has(form) h1,
+body:has(form) > p,
+body:has(form) form {
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.07);
+}
+
+form label {
+    display: block;
+    margin: 15px 0 6px;
+    font-weight: bold;
+}
+
+form input,
+form textarea,
+form select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d5dce5;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+form textarea {
+    min-height: 110px;
+}
+
+form button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 20px;
+    background: #16864b;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #106b3b;
+}
+
+/* Imagens dos produtos */
+.produto img {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 12px 12px 0 0;
+}
+
+/* =================================
+   DESIGN DA PÁGINA PUBLICAR PRODUTO
+================================= */
+
+body.pagina-publicar {
+    font-family: Arial, sans-serif;
+    background: #f3f5f9;
+    color: #26364b;
+    margin: 0;
+    min-height: 100vh;
+    padding: 45px 18px;
+}
+
+.pagina-publicar h1 {
+    max-width: 650px;
+    margin: 0 auto 10px;
+    color: #142b4a;
+    font-size: 32px;
+}
+
+.pagina-publicar > p {
+    max-width: 650px;
+    margin: 0 auto 25px;
+    color: #68778a;
+    line-height: 1.6;
+}
+
+/* Cartão do formulário */
+.pagina-publicar form {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 35px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(20, 43, 74, 0.08);
+}
+
+/* Textos dos campos */
+.pagina-publicar form label {
+    display: block;
+    margin-bottom: 9px;
+    color: #26364b;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Campos de preenchimento */
+.pagina-publicar input:not([type="file"]),
+.pagina-publicar textarea,
+.pagina-publicar select {
+    display: block;
+    width: 100%;
+    padding: 13px 14px;
+    margin-bottom: 22px;
+    border: 1px solid #dce2ea;
+    border-radius: 8px;
+    background: #ffffff;
+    font-size: 15px;
+    color: #26364b;
+    outline: none;
+    transition: 0.2s;
+}
+
+.pagina-publicar textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.pagina-publicar input:focus,
+.pagina-publicar textarea:focus,
+.pagina-publicar select:focus {
+    border-color: #1e416b;
+    box-shadow: 0 0 0 3px rgba(30, 65, 107, 0.10);
+}
+
+/* Campo das fotografias */
+.pagina-publicar input[type="file"] {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 12px;
+    border: 2px dashed #cbd5e1;
+    border-radius: 9px;
+    background: #f8fafc;
+    cursor: pointer;
+}
+
+.pagina-publicar form > p {
+    color: #78869a;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+/* Botão publicar */
+.pagina-publicar button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 9px;
+    background: #ffbd35;
+    color: #142b4a;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.pagina-publicar button[type="submit"]:hover {
+    background: #efa900;
+    transform: translateY(-2px);
+}
+
+/* Link voltar */
+.pagina-publicar > a {
+    display: block;
+    width: fit-content;
+    max-width: 650px;
+    margin: 22px auto;
+    color: #1e416b;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.pagina-publicar > a:hover {
+    color: #e69d00;
+}
+
+/* Mensagem de erro */
+.pagina-publicar > p[style*="color:red"] {
+    max-width: 650px;
+    margin: 15px auto;
+    padding: 12px;
+    background: #fff0f0;
+    border-radius: 8px;
+}
+
+/* Telemóveis */
+@media (max-width: 600px) {
+    body.pagina-publicar {
+        padding: 25px 12px;
+    }
+
+    .pagina-publicar h1 {
+        font-size: 25px;
+    }
+
+    .pagina-publicar form {
+        padding: 22px 17px;
+    }
+}
+.ver-detalhes {
+    display: block;
+    text-align: center;
+    padding: 12px;
+    margin: 12px 0;
+    background: #142b4a;
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.ver-detalhes:hover {
+    background: #1e416b;
+}
